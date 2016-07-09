@@ -42,11 +42,11 @@
                   </div>
                 </div>
             </div>
-            <div class="col-xs-9 col-xs-offset-1">
+            <div ng-repeat="comment in dishDetailCtrl.dish.comments" class="col-xs-9 col-xs-offset-1">
                 <blockquote>
-                  <p>{{dishDetailCtrl.dish.comments[0].rating}} Stars</p>
-                  <p>{{dishDetailCtrl.dish.comments[0].comment}}</p>
-                  <footer>{{dishDetailCtrl.dish.comments[0].author}}, {{dishDetailCtrl.dish.comments[0].date | date : format : 'mediumDate'}}</footer>
+                  <p>{{comment.rating}} Stars</p>
+                  <p>{{comment.comment}}</p>
+                  <footer>{{comment.author}}, {{comment.date | date : format : 'mediumDate'}}</footer>
                 </blockquote>
             </div>
         </div>
